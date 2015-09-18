@@ -5,6 +5,9 @@
 
 #define ALPH_SIZE 26
 
+//This tool analyzes the frequency of characters as they appear in a ciphertext.
+//Pass the ciphertext in through stdin
+
 struct elt{
   char map;
   int count;

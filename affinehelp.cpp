@@ -3,6 +3,12 @@
 
 #define ALPH_SIZE 26
 
+//This tool makes brute-forcing an affine cipher easier.
+//If you can already match one ciphertext character to a plaintext one
+//(through freq. analysis, for example), then use pass those characters
+//as arguments.  This tool will produce all possible cleartexts that involve
+//that mapping, which saves time when brute-forcing.  Pass in the ciphertext
+//through stdio.
 
 int modular_positive(int a){
   if(a > 0)
