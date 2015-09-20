@@ -19,7 +19,7 @@ int modular_positive(int a){
 }
 
 char decrypt(char k, char t){
-  int c = ((k - 'a') - (t - 'a'));
+  int c = ((t - 'a') - (k - 'a'));
   return modular_positive(c) + 'a';
 }
 

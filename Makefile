@@ -9,3 +9,6 @@ affinehelp: affinehelp.cpp
 
 vigenere: vigenere.cpp
 	g++ vigenere.cpp -o vigenere
+
+chianalyz: chianalyz.cpp
+	g++ chianalyz.cpp -o chianalyz

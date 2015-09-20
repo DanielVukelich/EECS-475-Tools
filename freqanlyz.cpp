@@ -2,7 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <vector>
-#include <stdio.h>
+#include <stdlib.h>
 
 #define ALPH_SIZE 26
 
