@@ -37,10 +37,12 @@ int main(int argc, char* argv[]){
 
   for(int reps = 0; reps < keylen; ++reps){
 
+    int textlen = 0;
+    
     std::cout << "\n****Begin analysis on every "
 	      << keylen
 	      << " letter(s), starting at letter "
-	      << reps << "****\n"; 
+	      << reps + 1<< "****\n"; 
     
     std::vector<elt> bucket(ALPH_SIZE);
     for(int i = 0; i < ALPH_SIZE; ++i){
@@ -50,11 +52,11 @@ int main(int argc, char* argv[]){
     
     for(int i = reps; i < text.length(); i += keylen){
       bucket[text[i] - 'a'].count += 1;
+      ++textlen;
     }
     
     std::sort(bucket.begin(), bucket.end(), cmpelt);
     
-    double textlen = (double) text.length();
     for(int i = 0; i < ALPH_SIZE; ++i){
       std::cout << bucket[i].map << " has frequency "
 		<< (double) ((double)bucket[i].count / textlen)
