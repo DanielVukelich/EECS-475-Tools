@@ -1,6 +1,10 @@
 #include "point.h"
 #include "utils.h"
 
+int elliptic_point::a = 0;
+int elliptic_point::b = 0;
+int elliptic_point::mod = 0;
+
 elliptic_point::elliptic_point(int x, int y){
   this->x = x;
   this->y = y;
@@ -19,10 +23,6 @@ void elliptic_point::set_group(int gmod, int ga, int gb){
   mod = gmod;
 }
 
-int elliptic_point::a = 0;
-int elliptic_point::b = 0;
-int elliptic_point::mod = 0;
-
 bool elliptic_point::operator==(const elliptic_point &rhs) const{
   return ((this->isPOI && rhs.isPOI) || ((this->x == rhs.x) && (this->y == rhs.y)));
 }
@@ -38,7 +38,7 @@ elliptic_point elliptic_point::operator+(const elliptic_point &P) const{
   if(this->isPOI)
     return P;
   else if(P.isPOI)
-    return elliptic_point(this->x, this->y, this->isPOI);
+    return (*this);
   
   if((*this) == P){
     if(P.y == 0){
