@@ -1,0 +1,11 @@
+test : utils.o tester.o point.o
+	g++ -g -o tester tester.o utils.o point.o
+
+utils.o : utils.h utils.cpp
+	g++ -g -c utils.cpp
+
+point.o : point.h point.cpp
+	g++ -g -c point.cpp
+
+tester.o : tester.cpp
+	g++ -g -c tester.cpp
