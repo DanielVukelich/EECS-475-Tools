@@ -13,13 +13,10 @@ elliptic_point::elliptic_point(int x, int y, bool isPOI){
   this->isPOI = isPOI;
 }
 
-void elliptic_point::set_curve(int ain, int bin){
-  a = ain;
-  b = bin;
-}
-
-void elliptic_point::set_mod(int modin){
-  mod = modin;
+void elliptic_point::set_group(int gmod, int ga, int gb){
+  a = ga;
+  b = gb;
+  mod = gmod;
 }
 
 int elliptic_point::a = 0;
@@ -28,6 +25,10 @@ int elliptic_point::mod = 0;
 
 bool elliptic_point::operator==(const elliptic_point &rhs) const{
   return ((this->isPOI && rhs.isPOI) || ((this->x == rhs.x) && (this->y == rhs.y)));
+}
+
+bool elliptic_point::operator!=(const elliptic_point &rhs) const{
+  return ((!(this->isPOI) != !rhs.isPOI) || !((*this) == rhs));
 }
 
 elliptic_point elliptic_point::operator+(const elliptic_point &P) const{
