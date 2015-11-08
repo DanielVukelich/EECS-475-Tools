@@ -14,6 +14,7 @@ int main(){
     c = a * b;
     std::cout << b << " * G = " << c << '\n';
   }
+  
   return 0;
 }
 
