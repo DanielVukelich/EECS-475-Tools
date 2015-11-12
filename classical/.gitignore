@@ -1,9 +1,10 @@
-classical/freqanlyz
-classical/affinehelp
-classical/vigenere
-classical/substrfind
-classical/chianalyz
-elliptic/tester
+freqanlyz
+affinehelp
+vigenere
+substrfind
+chianalyz
+*.o
+
 *~
 
 # Compiled Object files

@@ -1,3 +1,5 @@
+all: substrfind freqanlyz affinehelp vigenere chianalyz
+
 substrfind: substrfind.cpp
 	g++ -std=c++11 substrfind.cpp -o substrfind
 
@@ -12,3 +14,11 @@ vigenere: vigenere.cpp
 
 chianalyz: chianalyz.cpp
 	g++ chianalyz.cpp -o chianalyz
+
+.PHONY: clean
+clean:
+	rm affinehelp
+	rm chianalyz
+	rm freqanlyz
+	rm substrfind
+	rm vigenere
