@@ -1,3 +1,5 @@
+all: test residue
+
 test : utils.o tester.o point.o
 	g++ -g -o tester tester.o utils.o point.o
 
@@ -15,3 +17,9 @@ point.o : point.h point.cpp
 
 tester.o : tester.cpp
 	g++ -g -c tester.cpp
+
+.PHONY: clean
+clean:
+	rm *.o
+	rm residue
+	rm tester
