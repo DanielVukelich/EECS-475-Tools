@@ -12,10 +12,10 @@ int calc_gcd(std::vector<std::pair<int, int> > &euclidean){
 }
 
 int modular_positive(int y, int mod){
-  if(y >= 0)
-    return y % mod;
-  int x = -1 * y;
-  return (((x - (x % mod)) + y + mod) % mod);
+  int toret = y - (mod * (y / mod));
+  if(toret < 0)
+    toret += mod;
+  return toret;
 }
 
 int modular_inverse(int a, int mod){
