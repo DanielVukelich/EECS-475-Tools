@@ -3,6 +3,7 @@
 #include <iostream>
 
 int main(){
+  
   elliptic_point::set_group(11, 1, 6);
   elliptic_point a = elliptic_point(2,7);
   //Test that the code I've written to perform group operations really does work.
@@ -14,7 +15,7 @@ int main(){
     c = a * b;
     std::cout << b << " * G = " << c << '\n';
   }
-  
+
   return 0;
 }
 
