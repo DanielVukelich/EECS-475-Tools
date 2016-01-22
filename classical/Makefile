@@ -15,9 +15,13 @@ vigenere: vigenere.cpp
 chianalyz: chianalyz.cpp
 	g++ chianalyz.cpp -o chianalyz
 
+keyfind: keyfind.cpp
+	g++ keyfind.cpp -o keyfind
+
 .PHONY: clean
 clean:
 	rm affinehelp
+	rm keyfind
 	rm chianalyz
 	rm freqanlyz
 	rm substrfind

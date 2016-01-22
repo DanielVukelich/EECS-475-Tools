@@ -3,6 +3,7 @@ affinehelp
 vigenere
 substrfind
 chianalyz
+keyfind
 *.o
 
 *~
